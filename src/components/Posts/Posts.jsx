@@ -1,33 +1,71 @@
 import React, { useEffect, useState } from "react";
 import { getDataApi } from "../../api/getData";
-import './style.css'
+import { transformDate } from "./transformDate";
+import { PostList, PostItem, PostImage, PostContent } from "./styled";
 
 export const Post = () => {
-    const [data, setdata] = useState([])
-   
+    const [data, setData] = useState([])
+    
     useEffect(() =>{
-        getDataApi(setdata)
+        getDataApi(setData)
     }, [])
     
+    function orderMore(){
+       data.sort((a,b) => {
+            if(a.publishedAt > b.publishedAt){
+                return 1;
+            }else {
+                return -1
+            }
+        })
+        return data
+    }
+  
     return(
-        <div className="posts-list">
+        <PostList>
             {data.map((item, index) => {
-                return(
-                    <div className="post__item" key={item.id}>
-                        <img className="post__image" src={item.imageUrl} alt="post banner" />
-                        <div>
-                            <h3>{item.title}</h3>
-                            <div className="post__item--infos">
-                                <p>{Date(item.publishedAt)}</p>
-                                <button>newSite</button>
-                            </div>
-                            <p>{item.summary.length > 100 ? item.summary.substring(0,100) + '...' : item.summary }</p>
-                            <button>Ver mais</button>
-                        </div>
-                    </div>
-                )
+                
+                if(index%2 === 0){
+                    return(
+                        <PostItem key={item.id}>
+                            <PostImage src={item.imageUrl} alt="post banner" />
+                            <PostContent>
+                                <h3>{item.title}</h3>
+                                <div>
+                                    <p>{transformDate(item.publishedAt)}</p>
+                                    <button
+                                    type="button"
+                                    class="btn btn-outline-secondary"
+                                    onClick={() => window.open(item.url)}                                
+                                    >NewSite</button>
+                                </div>
+                                <p>{item.summary.length > 100 ? item.summary.substring(0,100) + '...' : item.summary }</p>
+                                <button type="button" class="btn btn-dark" onClick={() => orderMore()}>Ver mais</button>
+                            </PostContent>
+                        </PostItem>
+                    )
+                }else{
+                    return(
+                        <PostItem key={item.id}>
+                            <PostContent>
+                                <h3>{item.title}</h3>
+                                <div>
+                                    <p>{transformDate(item.publishedAt)}</p>
+                                    <button
+                                    type="button"
+                                    class="btn btn-outline-secondary"
+                                    onClick={() => window.open(item.url)}                                
+                                    >NewSite</button>
+                                </div>
+                                <p>{item.summary.length > 100 ? item.summary.substring(0,100) + '...' : item.summary }</p>
+                                <button type="button" class="btn btn-dark" onClick={() => orderMore()}>Ver mais</button>
+                            </PostContent>
+                            <PostImage src={item.imageUrl} alt="post banner" />
+                        </PostItem>
+                    )
+                }
+ 
             })}
-
-        </div>
+        </PostList>
     )
 }
