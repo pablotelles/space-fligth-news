@@ -1,5 +1,4 @@
 import { Home } from "./pages/Home.jsx";
-import { api } from "./api/apiBase.js";
 
 function App() {
   return (
