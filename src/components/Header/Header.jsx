@@ -1,13 +1,13 @@
 import React from "react"
 import { Selection } from "./selection/selection"
 import { Search } from "./search/Search"
-import './style.css'
+import { HeaderStyled } from "./styled"
 
 export const Header = () => {
     return(
-        <header>
+        <HeaderStyled>
             <Search />
             <Selection />
-        </header>
+        </HeaderStyled>
     )
 }

@@ -1,9 +1,13 @@
 import { api } from "./apiBase"
 
 export const getDataApi = (setData) => {
-api.get('/articles')
+    let counter = 0
+
+api.get(`/articles?_start=${counter}`)
     .then(function (response) {
         setData(response.data)
+        counter = +1
+        console.log(counter)
     console.log(response);
     })
     .catch(function (error) {
