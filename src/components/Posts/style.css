@@ -1,0 +1,17 @@
+.posts-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.post__image {
+    max-width: 200px;
+    height: 200px;
+}
+.post__item {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+.post__item--infos{
+    display: flex;
+    justify-content: space-between;
+}

@@ -1,0 +1,10 @@
+.logo-space__container{
+    text-align: center;
+    margin-bottom: 100px;
+}
+.logo-space{
+    width: 150px;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    margin: 0 auto;
+}
