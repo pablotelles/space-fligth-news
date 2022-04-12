@@ -1,26 +1,11 @@
-import React, { useEffect, useState } from "react";
-import { getDataApi } from "../../api/getData";
+import React, { useContext } from "react";
 import { transformDate } from "./transformDate";
 import { PostList, PostItem, PostImage, PostContent } from "./styled";
+import { DataContext } from "../../contexts/dataContext";
 
 export const Post = () => {
-    const [data, setData] = useState([])
-    
-    useEffect(() =>{
-        getDataApi(setData)
-    }, [])
-    
-    function orderMore(){
-       data.sort((a,b) => {
-            if(a.publishedAt > b.publishedAt){
-                return 1;
-            }else {
-                return -1
-            }
-        })
-        return data
-    }
-  
+    const {data} = useContext(DataContext)
+
     return(
         <PostList>
             {data.map((item, index) => {
@@ -40,7 +25,7 @@ export const Post = () => {
                                     >NewSite</button>
                                 </div>
                                 <p>{item.summary.length > 100 ? item.summary.substring(0,100) + '...' : item.summary }</p>
-                                <button type="button" class="btn btn-dark" onClick={() => orderMore()}>Ver mais</button>
+                                <button type="button" class="btn btn-dark">Ver mais</button>
                             </PostContent>
                         </PostItem>
                     )
@@ -58,7 +43,7 @@ export const Post = () => {
                                     >NewSite</button>
                                 </div>
                                 <p>{item.summary.length > 100 ? item.summary.substring(0,100) + '...' : item.summary }</p>
-                                <button type="button" class="btn btn-dark" onClick={() => orderMore()}>Ver mais</button>
+                                <button type="button" class="btn btn-dark">Ver mais</button>
                             </PostContent>
                             <PostImage src={item.imageUrl} alt="post banner" />
                         </PostItem>
