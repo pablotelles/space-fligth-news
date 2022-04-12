@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { colorBlack, fontGraph, fontTitle } from '../../UI/variables'
+import { colorBlack, fontGraph, fontTitle } from '../../../UI/variables'
 
 export const PostList = styled.div`
     max-width: 800px;
