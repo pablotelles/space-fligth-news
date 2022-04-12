@@ -9,7 +9,6 @@ export const DataProvider = ({children}) =>{
     useEffect(() => {
         getDataApi(setData)
     }, [])
-    console.log(data)
     return(
         <DataContext.Provider value={{data, setData}}>
             {children}

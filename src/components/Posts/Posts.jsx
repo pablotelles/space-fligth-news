@@ -8,8 +8,7 @@ export const Post = () => {
 
     return(
         <PostList>
-            {data.map((item, index) => {
-                
+            {data.map((item, index) => {                
                 if(index%2 === 0){
                     return(
                         <PostItem key={item.id}>
@@ -20,12 +19,12 @@ export const Post = () => {
                                     <p>{transformDate(item.publishedAt)}</p>
                                     <button
                                     type="button"
-                                    class="btn btn-outline-secondary"
+                                    className="btn btn-outline-secondary"
                                     onClick={() => window.open(item.url)}                                
                                     >NewSite</button>
                                 </div>
                                 <p>{item.summary.length > 100 ? item.summary.substring(0,100) + '...' : item.summary }</p>
-                                <button type="button" class="btn btn-dark">Ver mais</button>
+                                <button type="button" className="btn btn-dark">Ver mais</button>
                             </PostContent>
                         </PostItem>
                     )
@@ -38,12 +37,12 @@ export const Post = () => {
                                     <p>{transformDate(item.publishedAt)}</p>
                                     <button
                                     type="button"
-                                    class="btn btn-outline-secondary"
+                                    className="btn btn-outline-secondary"
                                     onClick={() => window.open(item.url)}                                
                                     >NewSite</button>
                                 </div>
                                 <p>{item.summary.length > 100 ? item.summary.substring(0,100) + '...' : item.summary }</p>
-                                <button type="button" class="btn btn-dark">Ver mais</button>
+                                <button type="button" className="btn btn-dark">Ver mais</button>
                             </PostContent>
                             <PostImage src={item.imageUrl} alt="post banner" />
                         </PostItem>

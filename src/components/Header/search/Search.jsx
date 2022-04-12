@@ -1,16 +1,14 @@
 import React from "react";
 import { AiOutlineSearch } from "react-icons/ai";
 
-
-
 export const Search = () => {
     return(
-        <div class="input-group search">
-            <div class="form-outline">
+        <div className="input-group search">
+            <div className="form-outline">
                 <input
                 type="search"
                 id="form1"
-                class="form-control"
+                className="form-control"
                 style={{
                     borderRadius: '5px 0 0 5px',
                 }}                
@@ -18,7 +16,7 @@ export const Search = () => {
             </div>
             <button
             type="button"
-            class="btn btn-primary
+            className="btn btn-primary
             search-icon"
             style={{
                 backgroundColor: '#1E2022',
@@ -28,7 +26,7 @@ export const Search = () => {
                 marginRight: '10px',
             }}            
             >
-                <i class="fas fa-search "><AiOutlineSearch /></i>
+                <i className="fas fa-search "><AiOutlineSearch /></i>
             </button>
         </div>
     )
