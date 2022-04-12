@@ -2,7 +2,7 @@ import { api } from "./apiBase"
 
 export const getMoreData = (data, setData, counter) => {
     
-    api.get(`/articles?_start=5`)
+    api.get(`/articles?_start=${counter}`)
         .then(function (response) {
             setData([...data, ...response.data])
         })
