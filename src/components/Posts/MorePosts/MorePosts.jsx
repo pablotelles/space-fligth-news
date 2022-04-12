@@ -8,7 +8,7 @@ export const MorePosts = () => {
     const [counter, setCounter] = useState(11)
 
     return(
-        <ButtonMorePost>
+      
             <button
             type="button"
             className="btn btn-outline-primary"
@@ -19,7 +19,11 @@ export const MorePosts = () => {
                 setCounter(counter + 11)
                 console.log(counter)            
             }}
+            style={{
+                width: '200px',
+                margin: '30px auto',
+            }}
             >Carregar mais</button>
-        </ButtonMorePost>
+
     )
 }

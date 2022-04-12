@@ -10,7 +10,7 @@ export const FilterOrder = () =>{
     <SelectionFilter onChange={(ev) => handlerChangeOrder(ev, data,setData)}
     className="form-select"
     aria-label="Default select example">
-        <option selected>Sort</option>
+        <option value="" disabled>Sort</option>
         <option value="old" >Mais antigas</option>
         <option value="new">Mais recentes</option>
     </SelectionFilter>

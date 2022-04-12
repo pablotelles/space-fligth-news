@@ -12,8 +12,10 @@ export const PostItem = styled.div`
     margin-bottom: 80px;
 `
 export const PostImage = styled.img`
-    max-width: 300px;
+    min-width: 300px;
+    mx-width: 350px;
     height: 200px;
+    object-fit: cover;
 `
 export const PostContent = styled.div`
     h3{
