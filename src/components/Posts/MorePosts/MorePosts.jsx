@@ -1,11 +1,17 @@
-import React from "react";
-import { getDataApi } from "../../../api/getData";
+import React, { useContext } from "react";
+import { getMoreData } from "../../../api/getMoreData";
+import { DataContext } from "../../../contexts/dataContext";
 
-export const MorePosts = (setData) => {
-    console.log(setData)
+export const MorePosts = () => {
+    const {data, setData} = useContext(DataContext)
+    let counter = 3
+  
     return(
         <button
-        onClick={(setData) => getDataApi(setData)}
+        onClick={(ev) => {
+            ev.preventDefault()
+            getMoreData(data, setData)
+         }}
         >Carregar mais</button>
     )
 }
