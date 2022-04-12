@@ -1,11 +1,10 @@
 import { api } from "./apiBase"
 
-
-export const getDataApi = (setData) => {
+export const getMoreData = (data, setData, counter) => {
     
-    api.get(`/articles`)
-        .then(function (response) {      
-            setData(response.data)
+    api.get(`/articles?_start=5`)
+        .then(function (response) {
+            setData([...data, ...response.data])
         })
         .catch(function (error) {
         // handle error
@@ -15,4 +14,3 @@ export const getDataApi = (setData) => {
         // always executed
         });
 }
-
