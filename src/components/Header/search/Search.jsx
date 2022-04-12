@@ -30,7 +30,7 @@ export const Search = () => {
                 border: 'none',
                 height: '37px',
                 borderRadius: '0px',
-                marginRight: '10px',
+                marginRight: '0',
             }}            
             >
                 <i className="fas fa-search "><AiOutlineSearch /></i>
