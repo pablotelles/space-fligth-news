@@ -1,8 +1,13 @@
 import React from "react"
 import { PostContent } from "./styled"
-import { transformDate } from "./transformDate"
+import { transformDate } from "../transformDate"
+import { ModalPost } from "../../Modal/Modal"
+
+
 
 export const Post = ({item}) => {
+
+
     return(
         <PostContent>
             <h3>{item.title}</h3>
@@ -15,7 +20,7 @@ export const Post = ({item}) => {
                 >NewSite</button>
             </div>
             <p>{item.summary.length > 100 ? item.summary.substring(0,100) + '...' : item.summary }</p>
-            <button type="button" className="btn btn-dark">Ver mais</button>
+            <ModalPost item={item} />
         </PostContent>
     )
 }
