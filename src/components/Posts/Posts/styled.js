@@ -5,11 +5,18 @@ export const PostList = styled.div`
     max-width: 800px;
     margin: 0 auto;
     color: ${colorBlack};
+    @media (max-width: 768px) {
+        margin: 0 20px;
+      }
 `
 export const PostItem = styled.div`
     display: flex;
     gap: 30px;
     margin-bottom: 80px;
+    @media (max-width: 768px) {
+        flex-direction: column;
+      }
+
 `
 export const PostImage = styled.img`
     min-width: 300px;
