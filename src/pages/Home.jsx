@@ -1,6 +1,5 @@
 import { Header } from "../components/Header/Header";
-import { Posts } from "../components/Posts/Posts/Posts";
-import { MorePosts } from "../components/Posts/MorePosts/MorePosts";
+import { Posts } from "../components/Posts/Posts/Posts/Posts";
 
 
 export const Home = () => {
@@ -9,7 +8,6 @@ export const Home = () => {
         <div>
             <Header />
             <Posts />
-            <MorePosts />
          </div>
     )
 }

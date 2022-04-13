@@ -19,6 +19,7 @@ export const Search = () => {
                         borderRadius: '5px 0 0 5px',
                     }}                
                     />
+    
                     <button
                     type="button"
                     className="btn btn-primary search-icon"
@@ -30,9 +31,8 @@ export const Search = () => {
                     }}            
                     >
                     <i className="fas fa-search "><AiOutlineSearch /></i>
-                </button>
+                    </button>
             </div>
-
         </div>
     )
 }
