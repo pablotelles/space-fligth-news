@@ -1,5 +1,5 @@
 import styled from "styled-components";
 
-export const ButtonMorePost = styled.div`
-    margin: 30px 0;
+export const MorePostsContainer = styled.div`
+    display: flex;
 `

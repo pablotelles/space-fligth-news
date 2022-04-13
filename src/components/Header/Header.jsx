@@ -1,13 +1,18 @@
 import React from "react"
 import { FilterOrder } from "./FilterOrder/FilterOrder"
-import { Search } from "./search/Search"
+import { Search } from "./Search/Search"
 import { HeaderStyled } from "./styled"
+import { LogoSpace } from "./LogoSpace/LogoSpace"
 
 export const Header = () => {
     return(
         <HeaderStyled>
-            <Search />
-            <FilterOrder />
+            <div>
+                <Search />
+                <FilterOrder />
+            </div>
+            <LogoSpace />
+            <hr />
         </HeaderStyled>
     )
 }
