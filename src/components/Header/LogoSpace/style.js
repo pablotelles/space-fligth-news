@@ -13,4 +13,7 @@ export const Logo = styled.img`
     padding-top: 50px;
     padding-bottom: 30px;
     margin: 0 auto;
+    @media (max-width: 768px) {
+        width: 100px;
+      }
 `

@@ -7,7 +7,7 @@ import { MorePosts } from "../components/Posts/MorePosts/MorePosts";
 export const Home = () => {
 
     return(
-        <div style={{display: 'grid'}}>
+        <div>
             <Header />
             <LogoSpace />
             <Posts />
