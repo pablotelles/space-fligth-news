@@ -6,4 +6,11 @@ export const HeaderStyled = styled.header `
     float: right;
     padding: 10px;
     gap: 10px;
+
+    @media (max-width: 800px) {
+        padding: 20px 20px;
+        flex-direction: column;
+        gap: 20px;
+        }
+    
 `

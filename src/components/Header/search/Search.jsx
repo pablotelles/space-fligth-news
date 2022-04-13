@@ -16,7 +16,7 @@ export const Search = () => {
                 value={search}
                 onChange={(ev) => setSearch(ev.target.value)}
                 style={{
-                    borderRadius: '5px 0 0 5px',
+                    borderRadius: '5px 0 0 5px',                    
                 }}                
                 />
             </div>
