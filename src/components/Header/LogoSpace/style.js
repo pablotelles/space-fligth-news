@@ -2,10 +2,14 @@ import styled from 'styled-components'
 
 
 export const LogoContainer = styled.div`
-    text-align: center;
-    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 100px;    
+	align-items: center;
+    margin-bottom: 50px;
     h2{
         font-size: 30px;
+        text-align: center;
     }
 `
 export const Logo = styled.img`

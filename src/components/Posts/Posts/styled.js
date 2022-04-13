@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { colorBlack, fontGraph, fontTitle } from '../../../UI/variables'
 
 export const PostList = styled.div`
-    max-width: 1000px;
+    max-width: 800px;
     margin: 0 auto;
     color: ${colorBlack};
     @media (max-width: 768px) {
@@ -54,6 +54,6 @@ export const PostContent = styled.div`
         padding-bottom: 20px;
     }
     @media (max-width: 768px) {
-        padding: 0 10px 20px 10px;
+        padding: 0 20px 20px 20px;
       }
 `

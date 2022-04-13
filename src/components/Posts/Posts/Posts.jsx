@@ -6,9 +6,10 @@ import { Post } from "./Post";
 export const Posts = () => {
     const {data} = useContext(DataContext)
     let windowWidth = window.innerWidth;
-      
+          
     return(
         <PostList>
+            <hr></hr>
             {data.map((item, index) => {  
                 if(windowWidth < 500){
                     return (
@@ -33,9 +34,9 @@ export const Posts = () => {
                         </PostItem>
                         )
                     } 
-                }            
-                
+                }       
             })}
         </PostList>
     )
+    
 }
