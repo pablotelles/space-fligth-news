@@ -8,9 +8,10 @@ export const HeaderStyled = styled.header `
     gap: 10px;
 
     @media (max-width: 800px) {
-        padding: 20px 20px;
+        
         flex-direction: column;
         gap: 20px;
+        max-width: 100%;
         }
     
 `

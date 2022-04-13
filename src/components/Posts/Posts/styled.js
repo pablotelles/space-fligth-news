@@ -2,11 +2,12 @@ import styled from 'styled-components'
 import { colorBlack, fontGraph, fontTitle } from '../../../UI/variables'
 
 export const PostList = styled.div`
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
     color: ${colorBlack};
     @media (max-width: 768px) {
-        margin: 0 20px;
+        max-width: 100%;
+        margin: 20px;
       }
 `
 export const PostItem = styled.div`
@@ -15,6 +16,8 @@ export const PostItem = styled.div`
     margin-bottom: 80px;
     @media (max-width: 768px) {
         flex-direction: column;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        border-radius: 0 0 10px 10px;
       }
 
 `
@@ -28,6 +31,9 @@ export const PostContent = styled.div`
     h3{
         font-size: ${fontTitle};
         font-weight: bold;
+        @media (max-width: 768px) {
+            font-size: 20px;
+          }
     }
     div{
         display: flex;
@@ -47,4 +53,7 @@ export const PostContent = styled.div`
         font-size: ${fontGraph};
         padding-bottom: 20px;
     }
+    @media (max-width: 768px) {
+        padding: 0 10px 20px 10px;
+      }
 `
