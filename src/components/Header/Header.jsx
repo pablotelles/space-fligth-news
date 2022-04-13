@@ -1,6 +1,6 @@
 import React from "react"
 import { FilterOrder } from "./FilterOrder/FilterOrder"
-import { Search } from "./Search/Search"
+import { Search } from "./search/Search"
 import { HeaderStyled } from "./styled"
 import { LogoSpace } from "./LogoSpace/LogoSpace"
 
