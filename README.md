@@ -16,6 +16,8 @@
     <li>Axios</li>
 </ul>
 <hr>
-
+<h3>How to install and use</h3>
+<p>To run the "app" file with Node.js, open your terminal in VS Code by selecting View > Terminal. If you need to change the default terminal, select the drop-down menu and choose Select Default Shell. Then type yarn and confirm, after installation type yarn start and the application will open in your default browser.</p>
 <h3>Deployment</h3>
-<a href='https://space-fligth-news.vercel.app/'>
+<a href='https://space-fligth-news.vercel.app/'>click here<a/>
+
